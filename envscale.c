@@ -20,7 +20,7 @@ int main (int argc, char **argv)
   GdkWindowAttr attributes;
   gint scale;
 
-  if (argc < 2) {
+  if (argc < 2)
     errx(1, "Missing argument");
 
   // argc - argv[0] + argv[argc] NULL pointer
