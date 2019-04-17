@@ -4,7 +4,7 @@ envscale
 A small utility that sets several HiDPI scaling environment variables before
 running a command. It uses GDK to detect the current scaling factor.
 
-Note: The tools was built to solve a specific issue on certain applications
+Note: The tool was built to solve a specific issue on certain applications
 running under GNOME/Wayland and is unlikely to work in other environments.
 
 ## Install
@@ -29,7 +29,7 @@ On Arch Linux, you can use the included `PKGBUILD`
     envscale COMMAND [ARG]...
 
 Sets several HiDPI scaling variables in the process environment then execs
-COMMAND. Any additional arguments are passed directly to COMMAND.
+`COMMAND`. Any additional arguments are passed directly to `COMMAND`.
 
 ### Environment
 
