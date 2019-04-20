@@ -20,16 +20,17 @@ Then run:
     $ make
     $ sudo make install
 
-On Arch Linux, you can use the included `PKGBUILD`
+On Arch Linux, you can install `envscale` from the AUR.
 
-    $ makepkg -si
+## Usage
 
-## Useage
-
-    envscale COMMAND [ARG]...
+    envscale [-f] COMMAND [ARG]...
 
 Sets several HiDPI scaling variables in the process environment then execs
 `COMMAND`. Any additional arguments are passed directly to `COMMAND`.
+
+The `-f` option adds `--force-device-scale-factor` as the first argument to
+COMMAND.
 
 ### Environment
 
@@ -38,6 +39,7 @@ Currently, the following environment variables are set:
   * `GDK_SCALE`
   * `QT_SCALE_FACTOR`
   * `QT_AUTO_SCREEN_SCALE_FACTOR=0`
+  * `ELM_SCALE`
 
 ## License and copyright
 
