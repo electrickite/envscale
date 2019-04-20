@@ -1,0 +1,24 @@
+.TH ENVSCALE 1 envscale\-VERSION
+.SH NAME
+envscale \- Sets several HiDPI scaling environment variables
+.SH SYNOPSIS
+.B envscale
+.RB [-f]
+.RB COMMAND
+.RB [ARG]...
+.SH DESCRIPTION
+envscale sets several HiDPI (High Dots Per Inch) scaling variables in the process environment then execs COMMAND. Any additional arguments are passed directly to COMMAND. Use envscale to launch applications that do not correctly detect the monitor scale factor.
+.SH OPTIONS
+.TP
+.B \-f
+Add "--force-device-scale-factor" as first argument to COMMAND
+.SH NOTES
+envscale uses GDK to detect the current scaling factor and is not known to perform well outside of a GNOME/Wayland desktop environment.
+
+Environment variables currently set are: GDK_SCALE, QT_SCALE_FACTOR, QT_AUTO_SCREEN_SCALE_FACTOR=0 and ELM_SCALE.
+.SH AUTHOR
+Written by Corey Hinshaw.
+.SH COPYRIGHT
+Copyright 2019 Corey Hinshaw
+.br
+License: MIT License - See the LICENSE file for details.
